@@ -8,6 +8,52 @@ full_number = full_number // 10
 
 second_number = full_number % 10
 full_number = full_number // 10
+# 1 Задача.Найдите сумму цифр трехзначного числа.
+
+full_number = int(input("Введите трехзначное число: "))
+# разделим число нацело на десять, в остатке будет последняя цифра этого числа.
+first_number = full_number % 10
+# избавимся от остатка.
+full_number = full_number // 10
+
+second_number = full_number % 10
+full_number = full_number // 10
+
+print(full_number + first_number + second_number)
+
+
+
+# 2 Задача. Петя, Катя и Сережа делают из бумаги журавликов. Вместе они сделали S журавликов. Сколько журавликов сделал каждый ребенок, если известно, что Петя и Сережа сделали одинаковое количество журавликов, а Катя сделала в два раза больше журавликов, чем Петя и Сережа вместе?
+
+sum = int(input("Введите общее количество журавликов: "))
+petya_sum = sum / 4
+seryozha_sum = petya_sum
+katya_sum = (petya_sum + seryozha_sum) + petya_sum
+print(f"Петя сделал: {petya_sum}")
+print(f"Сережа сделал: {seryozha_sum}")
+print(f"Катя сделала: {katya_sum}")
+
+
+# 3 Задача. Вы пользуетесь общественным транспортом? Вероятно, вы расплачивались за проезд и получали билет с номером. Счастливым билетом называют такой билет с шестизначным номером, где сумма первых трех цифр равна сумме последних трех. Т.е. билет с номером 385916 – счастливый, т.к. 3+8+5=9+1+6. Вам требуется написать программу, которая проверяет счастливость билета.
+
+number = input("Введите шестизначное число: ")
+first_three_numbers = int(number[0]) + int(number[1]) + int(number[2])
+second_three_numbers = int(number[3]) + int(number[4]) + int(number[5])
+if first_three_numbers == second_three_numbers:
+    print("Yes")
+else:
+    print("No")
+
+# 4 Задача. Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, если разрешается сделать один разлом по прямой между дольками (то есть разломить шоколадку на два прямоугольника).
+
+m = int(input("Введите значение m: "))
+n = int(input("Введите значение n: "))
+k = int(input("Введите значение k: "))
+# делим k без оcтатка на m и на k
+if (k % m == 0 or k % n == 0) and ( k < m * n):
+    print("Yes")
+else:
+    print("No")
 
 print(full_number + first_number + second_number)
 
